@@ -1,0 +1,40 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 21, in script
+    play audio okay.mp3
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 21, in <module>
+    play audio okay.mp3
+AttributeError: 'str' object has no attribute 'mp3'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 21, in script
+    play audio okay.mp3
+  File "C:\Users\lukas\Documents\renpy-8.2.3-sdk\renpy\ast.py", line 1971, in execute
+    self.call("execute")
+  File "C:\Users\lukas\Documents\renpy-8.2.3-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\lukas\Documents\renpy-8.2.3-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\lukas\Documents\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\lukas\Documents\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 21, in <module>
+    play audio okay.mp3
+AttributeError: 'str' object has no attribute 'mp3'
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.2.3.24061702
+Toaster Bot Dating Sim 1.0
+Sat Jul 13 22:17:14 2024
